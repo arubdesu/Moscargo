@@ -7,11 +7,11 @@ Moscargo is a [Munki(2)](https://www.munki.org/munki/) repo browser to aid in fi
 It's written in flask, loosely wrapped in bootstrap, and inspired greatly by [Margarita](https://github.com/jessepeterson/margarita). It was thrown together by a novice ([me](http://resume.aru-b.com)) very quickly, so it may very well not work for you. However, feel free to file issues with the understanding that I may not be able to (or honestly be interested in) do(ing) much more work on this, since more full-fledged solutions like [Sal](http://salsoftware.com), [MunkiWebAdmin](https://github.com/munki/munkiwebadmin), [MunkiReport](https://github.com/munkireport/munkireport-php), and [MunkiServer](https://github.com/jnraine/munkiserver)(among others) are available and staffed by more capable devs.
 
 ###How it does what it does: 
-A bootstrap html template gets filled in with info from a python script. That script checks the 'all' catalog(you can change it in the script if you'd like to limit it to a specific catalog), generates a list of dictionaries for each item it finds (except for Apple Update Metadata pkginfos, since those wouldn't have download links). It caps each description to the length of a tweet, and performs a set of checks to be able to make smart choices about icons: 
+A bootstrap html template gets filled in with info from a python script. That script checks the 'all' catalog(you can change it in the script if you'd like to limit it to a specific catalog), generates a list of dictionaries for each item it finds (except for nopkg or Apple Update Metadata pkginfos, since those wouldn't have download links). It caps each description to the length of a tweet, and performs a set of checks to be able to make smart choices about icons: 
 - if it's a configuration profile(new in munki as of [2.2](https://github.com/munki/munki/releases/tag/v.2.2.3)) it'll use a default image for that file type, (provided)
 - if it has 'icon_name' set, it will use the designated icon
 - if no 'icon_name' is set, it checks for a path in icons that has the short product name, and uses that if found
-- if all else fails, it uses the (also provided_ generic 'packages.png'
+- if all else fails, it uses the (also provided) generic 'packages.png'
 
 It then reverse-sorts this list of dict-per-catalog-entry by the version, creates a set to throw out duplicates (leaving the highest numerical version), and sorts again by name for ease of scrolling-lookup. (I could get fancier with bootstrap widgets and toolbars, but eff it, ship it. Maybe v.3) 
 ## Installation
