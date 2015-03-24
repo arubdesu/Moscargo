@@ -1,6 +1,6 @@
-# README #
+# Moscargo, your Munki repo browser! #
 
-Moscargo is a [munki(2)](https://www.munki.org/munki/) repo browser to aid in finding the most current version of the packages you curate, and makes them available for ad-hoc download, with the version number as the download link.
+Moscargo is a [Munki(2)](https://www.munki.org/munki/) repo browser to aid in finding the most current version of the packages you curate, and makes them available for ad-hoc download, with the version number as the download link.
 
 ![Screen Shot 2015-03-18 at 11.58.37 AM.png](https://bitbucket.org/repo/694roL/images/3004430561-Screen%20Shot%202015-03-18%20at%2011.58.37%20AM.png)
 
