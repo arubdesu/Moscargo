@@ -19,30 +19,5 @@ To install, first check out or otherwise grab this code. I'd recommend setting u
 
 Test by first activating the virtualenv and running the moscargo.py file directly and navigate to http://localhost:5000. For better performance(you could be serving hundreds of megs on top of the regular munki repo load) and ease of 'prod' deployment, you may also want to use pip to install mod_wsgi, which is the simplest way I've found to get this running in Apache on a Mac with the included mos.wsgi script, it also leaves any pre-existing Apache config as-is. If all seems good, run the mod_wsgi-express script, preferably as a restricted service user and make sure that works as well, which would move it to port 8000 by default. (A launchd plist or other pleaserun method of init'ing the webservice is left as an exercise for you, see the Margarita and MunkiWebAdmin docs for some hints.)
 
-Sorry that this probably isn't the friendliest setup ever, but even if you're not familiar with python and web apps, I'm sure you'll learn a lot if you tried giving this a go. Just remember, as the saying goes, if you break your system YOU get to keep the pieces.
-
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Sorry that this probably isn't the friendliest setup ever, but even if you're not familiar with python and web apps, I'm sure you'll learn a lot if you tried giving this a go. (Heck, some enterprising individual may even go ahead and throw this in a Docker container for ease of tinkering, who knows?)
+Just remember, as the saying goes, if you break your system YOU get to keep the pieces.
