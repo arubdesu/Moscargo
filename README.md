@@ -2,7 +2,7 @@
 
 Moscargo is a [Munki(2)](https://www.munki.org/munki/) repo browser to aid in finding the most current version of the packages you curate, and makes them available for ad-hoc download, with the version number as the download link.
 
-![Screen Shot 2015-03-18 at 11.58.37 AM.png](https://bitbucket.org/repo/694roL/images/3004430561-Screen%20Shot%202015-03-18%20at%2011.58.37%20AM.png)
+![Screen Shot 2015-03-18 at 11.58.37 AM.png](https://raw.githubusercontent.com/arubdesu/Moscargo/master/static/readmeScreenshot.png)
 
 It's written in flask, loosely wrapped in bootstrap, and inspired greatly by [Margarita](https://github.com/jessepeterson/margarita). It was thrown together by a novice ([me](http://resume.aru-b.com)) very quickly, so it may very well not work for you. However, feel free to file issues with the understanding that I may not be able to (or honestly be interested in) do(ing) much more work on this, since more full-fledged solutions like [Sal](http://salsoftware.com), [MunkiWebAdmin](https://github.com/munki/munkiwebadmin), [MunkiReport](https://github.com/munkireport/munkireport-php), and [MunkiServer](https://github.com/jnraine/munkiserver)(among others) are available and staffed by more capable devs.
 
