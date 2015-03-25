@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template, redirect#jsonify
+from flask import render_template, redirect
 app = Flask(__name__)
 from operator import itemgetter
 from distutils.version import LooseVersion
@@ -7,8 +7,8 @@ import plistlib
 import os
 
 #set this to the base of your munki repo:
-repo_base = '/Users/Shared/repo/'
-# ad override the catalog to parse below:
+repo_base = os.environ.get('MOSCARGO_REPO') or '/Users/Shared/repo/'
+# override the catalog to parse below:
 catalog_to_parse = 'all'
 
 # yup, stolen whole-heartedly from http://stackoverflow.com/a/22878816/743638
@@ -24,7 +24,7 @@ def get_key_watcher():
     return key_not_seen
 
 try:
-    products = plistlib.readPlist(os.path.join(repo_base, 'catalogs/all'))
+    products = plistlib.readPlist(os.path.join(repo_base, 'catalogs', catalog_to_parse))
     prodlist = []
     for prod_dict in products:
         if not prod_dict.get('installer_type') == 'apple_update_metadata':
